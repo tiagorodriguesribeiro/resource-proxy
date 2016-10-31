@@ -209,6 +209,7 @@ java.text.SimpleDateFormat" %>
             byte[] byteResponse = buffer.toByteArray();
             OutputStream ostream = clientResponse.getOutputStream();
             ostream.write(byteResponse);
+            ostream.flush();
             ostream.close();
             byteStream.close();
         }
